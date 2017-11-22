@@ -100,7 +100,7 @@ namespace WpfCaliburnDemo.Views
             });
 
 
-            DataContext = this;
+            root.DataContext = this;
         }
 
         public SeriesCollection LastHourSeries { get; set; }

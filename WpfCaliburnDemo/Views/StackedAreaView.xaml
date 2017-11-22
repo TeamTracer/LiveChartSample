@@ -7,7 +7,7 @@
              xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
+    <Grid x:Name="root">
         <lvc:CartesianChart Grid.Row="2" Series="{Binding SeriesCollection}"  LegendLocation="Right">
             <lvc:CartesianChart.AxisX>
                 <lvc:Axis Title="Year" LabelFormatter="{Binding XFormatter}"></lvc:Axis>

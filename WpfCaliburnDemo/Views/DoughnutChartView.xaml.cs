@@ -65,7 +65,7 @@ namespace WpfCaliburnDemo.Views
             //SeriesCollection.Add(new PieSeries());
             //SeriesCollection[0].Values.Add(5);
 
-            DataContext = this;
+            root.DataContext = this;
         }
 
         public SeriesCollection SeriesCollection { get; set; }

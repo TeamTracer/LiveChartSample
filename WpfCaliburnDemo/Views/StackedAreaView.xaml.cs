@@ -98,7 +98,7 @@ namespace WpfCaliburnDemo.Views
             XFormatter = val => new DateTime((long)val).ToString("yyyy");
             YFormatter = val => val.ToString("N") + " M";
 
-            DataContext = this;
+            root.DataContext = this;
         }
 
         public SeriesCollection SeriesCollection { get; set; }

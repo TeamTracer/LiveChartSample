@@ -25,7 +25,7 @@ namespace WpfCaliburnDemo.Views
         public BasicColumnView()
         {
             InitializeComponent();
-
+            root.DataContext = this;
         }  
     }
 }
