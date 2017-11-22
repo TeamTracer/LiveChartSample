@@ -1,0 +1,50 @@
+﻿<Window x:Class="WpfCaliburnDemo.Views.HomeView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfCaliburnDemo.Views"
+        mc:Ignorable="d"
+        Title="HomeView" Height="700" Width="1300">
+    <Border Padding="15px">
+        <StackPanel>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0">
+                    <TextBlock Text="First Name"/>
+                    <TextBox Margin="0 0 5 0" x:Name="FirstName"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <TextBlock Text="Last Name"/>
+                    <TextBox Margin="5 0 0 0" x:Name="LastName"/>
+                </StackPanel>
+            </Grid>
+            <TextBlock Text="Full Name" Margin="0 10 0 0"/>
+            <TextBlock Text="{Binding Path=FullName, Mode=OneWay}"></TextBlock>
+            <ComboBox x:Name="People" SelectedItem="{Binding Path=SelectedPerson, Mode=OneWayToSource}"
+                      DisplayMemberPath="FirstName"/>
+            <TextBlock x:Name="SelectedPerson_LastName"/>
+            <Button x:Name="ClearText" Content="Clear"/>
+            <Grid Margin='0 10 0 0'>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" x:Name="PieChart" Content="Pie Chart"/>
+                <Button Grid.Column="1" x:Name="MaterialDesign" Content="Material Design"/>
+                <Button Grid.Column="2" x:Name="BasicColumn" Content="Basic Column"/>
+                <Button Grid.Column="3" x:Name="StackedArea" Content="Stacked Area"/>
+                <Button Grid.Column="4" x:Name="DoughnutChart" Content="Doughnut Chart"/>
+            </Grid>
+            <ContentControl x:Name="ActiveItem" Height="480">
+
+            </ContentControl>
+        </StackPanel>
+    </Border>
+</Window>

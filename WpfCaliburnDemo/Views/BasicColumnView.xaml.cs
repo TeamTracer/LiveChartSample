@@ -12,17 +12,20 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using LiveCharts;
+using LiveCharts.Wpf;
 
-namespace WpfCaliburnDemo
+namespace WpfCaliburnDemo.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for BasicColumnView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class BasicColumnView : UserControl
     {
-        public MainWindow()
+        public BasicColumnView()
         {
             InitializeComponent();
-        }
+
+        }  
     }
 }
