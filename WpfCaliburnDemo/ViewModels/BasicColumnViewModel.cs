@@ -93,7 +93,7 @@ namespace WpfCaliburnDemo.ViewModels
         }
         public Func<ChartPoint, string> PointLabel { get; set; }
 
-        public BasicColumnViewModel DataContext { get; private set; }
+        public BasicColumnViewModel DataContext { get; set; }
 
         public SeriesCollection SeriesCollection { get; set; }
         public string[] Labels { get; set; }
